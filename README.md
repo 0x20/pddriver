@@ -3,9 +3,18 @@
 At hackerspace.gent we have a Fujitsu touch screen PC that we use as the cash register for the bar. However, the screen is rather slow to wake up when you tap it. The hardware has a built-in presence detect sensor within the webcam module. This repository contains a daemon that monitors this sensor and wakes up the screen when a human-like object is detected. 
 
 
-## Dependencies
+## Installation
 
-    sudo apt install libudev-dev libusb-1.0-0-dev xdotool 
+Install the debian package from this repository (or build it yourself, see below).
+
+Then create a systemd user service (important, not system-level) in `~/.config/systemd/user/pddriver.service` from the account running the bar UI.
+
+Then reload using `systemctl --user daemon-reload`, and enable and start using: 
+
+    systemctl --user enable pddriver
+    systemctl --user start pddriver
+
+Inspect the log files using `systemctl --user status pddriver`
 
 ## Building
 
