@@ -2,6 +2,10 @@
 
 At hackerspace.gent we have a Fujitsu touch screen PC that we use as the cash register for the bar. However, the screen is rather slow to wake up when you tap it. The hardware has a built-in presence detect sensor within the webcam module. This repository contains a daemon that monitors this sensor and wakes up the screen when a human-like object is detected. 
 
+The device identifier of the sensor in this machine is:
+
+    0bf8:101a Fujitsu Siemens Computers HID Presence Sensor
+
 
 ## Installation
 
