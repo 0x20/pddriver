@@ -6,6 +6,10 @@ Driver for the presence detect sensor that's embedded in the touchscreen AIO PC 
 
     sudo apt install libudev-dev libusb-1.0-0-dev
 
+## Installation
+
+- make sure to chown root + chmod u+s the file 
+
 ## Initial investigation
 
 usbhid-dump output: 
