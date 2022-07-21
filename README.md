@@ -1,14 +1,28 @@
 # pddriver
 
-Driver for the presence detect sensor that's embedded in the touchscreen AIO PC we use in our bar till.
+At hackerspace.gent we have a Fujitsu touch screen PC that we use as the cash register for the bar. However, the screen is rather slow to wake up when you tap it. The hardware has a built-in presence detect sensor within the webcam module. This repository contains a daemon that monitors this sensor and wakes up the screen when a human-like object is detected. 
+
 
 ## Dependencies
 
-    sudo apt install libudev-dev libusb-1.0-0-dev
+    sudo apt install libudev-dev libusb-1.0-0-dev xdotool 
 
 ## Installation
 
-- make sure to chown root + chmod u+s the file 
+Install the dependencies using: 
+
+    sudo apt install libudev-dev libusb-1.0-0-dev xdotool 
+
+Build using a recent version of cmake, and copy the pddriver executable to `/usr/local/bin`.
+
+Chown the `pddriver` executable to root, and set the correct setuid permissions:
+
+    chown root /usr/local/bin/pddriver
+    chmod u+s /usr/local/bin/pddriver 
+
+## Author
+
+This tool was written by Yvan Janssens <yvanj@cyber.gent>.
 
 ## Initial investigation
 
