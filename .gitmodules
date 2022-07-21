@@ -1,0 +1,6 @@
+[submodule "3rdparty/hidapi"]
+	path = 3rdparty/hidapi
+	url = https://github.com/libusb/hidapi.git
+[submodule "3rdparty/log.c"]
+	path = 3rdparty/log.c
+	url = https://github.com/rxi/log.c.git
