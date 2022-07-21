@@ -1,16 +1,15 @@
 #include "config.h"
 
-#include <stdio.h>
 #include <log.h>
 #include <hidapi.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 
 int main() {
     int res;
     hid_device *sensor_handle;
     unsigned char buf[256];
-    wchar_t vendor_string[256];
 
     log_info("Starting %s-%s", app_name, app_version);
     log_info("Author: %s - %s", app_author, app_website);
@@ -36,6 +35,7 @@ int main() {
             continue;
         if (buf[1] == 0x01) {
             log_info("Carbon-based life form detected");
+            system(mouse_move_cmd);
         } else {
             log_info("Carbon-based life form disappeared");
         }
