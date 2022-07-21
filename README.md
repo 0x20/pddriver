@@ -7,7 +7,7 @@ At hackerspace.gent we have a Fujitsu touch screen PC that we use as the cash re
 
     sudo apt install libudev-dev libusb-1.0-0-dev xdotool 
 
-## Installation
+## Building
 
 Install the dependencies using: 
 
@@ -19,6 +19,10 @@ Chown the `pddriver` executable to root, and set the correct setuid permissions:
 
     chown root /usr/local/bin/pddriver
     chmod u+s /usr/local/bin/pddriver 
+
+A Debian package should be able to be created using 
+
+    cpack -G DEB
 
 ## Author
 

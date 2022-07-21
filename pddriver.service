@@ -3,7 +3,7 @@ Description=A simple USB HID presence detector driver.
 
 [Service]
 Environment=
-ExecStart=/usr/local/bin/pddriver
+ExecStart=/usr/bin/pddriver
 Restart=always
 
 [Install]
