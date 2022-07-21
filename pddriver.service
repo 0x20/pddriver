@@ -1,0 +1,10 @@
+[Unit]
+Description=A simple USB HID presence detector driver.
+
+[Service]
+Environment=
+ExecStart=/usr/local/bin/pddriver
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
